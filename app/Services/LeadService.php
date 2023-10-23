@@ -28,5 +28,10 @@ class LeadService
 
         return ['message' => 'Lead saved successfully', 'lead' => $lead];
     }
-    
+
+    public function updateLead(Lead $lead, array $data)
+    {
+        // Use Eloquent to update the lead record with the provided data
+        $lead->update($data);
+    }
 }

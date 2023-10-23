@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ZipCodeController;
+use App\Http\Controllers\PropertyDataController;
+use App\Http\Controllers\ZillowController;
 
 
 /*
@@ -31,3 +33,8 @@ Route::get('/leads/{lead}/edit', [LeadController::class, 'edit'])->name('leads.e
 Route::put('/leads/{lead}', [LeadController::class, 'update'])->name('leads.update');
 
 Route::get('api/zipcode/{zipcode}', [ZipCodeController::class, 'getZipCodeInfo']);
+
+Route::get('/leads/{lead}/check-on-zillow', [ZillowController::class, 'checkOnZillow'])->name('leads.checkOnZillow');
+
+Route::get('/leads/{lead}/Realty-Mole-Property', [PropertyDataController::class, 'propertyApi'])->name('propertyApi');
+

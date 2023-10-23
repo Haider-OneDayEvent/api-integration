@@ -77,7 +77,11 @@
                     </div>
                 </div>
 
+                <div class="d-flex justify-content-around">
                 <button type="submit" class="btn btn-primary">Update</button>
+                <a href="{{ route('leads.checkOnZillow', $lead->id) }}" class="btn btn-info">Check on Zillow</a>
+                <a href="{{ route('propertyApi', $lead->id) }}" class="btn btn-secondary">Check on Realty Mole Property</a>
+                </div>
             </form>
         </div>
     </div>
